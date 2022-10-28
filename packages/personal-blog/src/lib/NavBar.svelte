@@ -4,5 +4,6 @@
 	<ul class="flex flex-row space-x-8 text-sm">
 		<li>Contact</li>
 		<li>CV</li>
+		<li>Speaking</li>
 	</ul>
 </nav>
