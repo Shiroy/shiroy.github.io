@@ -2,6 +2,7 @@
 	import Article from '$lib/Article.svelte';
 	import Title from '$lib/Title.svelte';
 	import Paragraph from '$lib/Paragraph.svelte';
+	import Subtitle from '$lib/Subtitle.svelte';
 </script>
 
 <Article>
@@ -23,6 +24,13 @@
 		et purus a, laoreet viverra libero. Etiam dapibus consequat convallis. Phasellus imperdiet nunc
 		eu dolor blandit volutpat. Sed volutpat tristique odio id pulvinar. Aliquam at varius quam.
 	</Paragraph>
+
+	<Subtitle level="h2">A very very long title !!</Subtitle>
+	<Subtitle level="h3">A very very long title !!</Subtitle>
+	<Subtitle level="h4">A very very long title !!</Subtitle>
+	<Subtitle level="h5">A very very long title !!</Subtitle>
+	<Subtitle level="h6">A very very long title !!</Subtitle>
+
 	<Paragraph>
 		Fusce tortor lacus, suscipit ut elit id, placerat maximus libero. Vivamus ut libero vitae justo
 		efficitur aliquet. Integer sed leo a ex vulputate lacinia id vel nisi. Proin arcu tellus,
@@ -43,6 +51,7 @@
 		sagittis. Maecenas vel consectetur turpis. Morbi ultrices tincidunt euismod. Nullam eu nisi
 		tortor. Aenean semper lacus elementum, aliquet magna a, auctor odio.
 	</Paragraph>
+	<Subtitle level="h3">A very very long title !!</Subtitle>
 	<Paragraph>
 		Cras fringilla, justo quis laoreet finibus, ante nisi porta ex, et volutpat nisi odio a metus.
 		Praesent vitae pharetra odio. Vestibulum nec ante imperdiet, iaculis nunc posuere, lacinia mi.
@@ -51,6 +60,7 @@
 		laoreet viverra sem luctus quis. Cras sagittis, felis ac porta tempus, quam dui lacinia urna,
 		pretium mollis nibh lacus non nulla. Nulla quis commodo mi, vel aliquam nunc.
 	</Paragraph>
+	<Subtitle level="h4">A very very long title !!</Subtitle>
 	<Paragraph>
 		Duis condimentum lorem nec lorem congue, vitae venenatis arcu mollis. Sed sit amet ligula metus.
 		Donec nec nisl vel quam scelerisque egestas faucibus ut massa. Curabitur efficitur ultrices
