@@ -3,6 +3,7 @@
 	import Title from '$lib/Title.svelte';
 	import Paragraph from '$lib/Paragraph.svelte';
 	import Subtitle from '$lib/Subtitle.svelte';
+	import Code from '$lib/Code.svelte';
 </script>
 
 <Article>
@@ -42,6 +43,10 @@
 		amet lacinia ligula. In malesuada rhoncus pretium. Maecenas quis nisl nec ex efficitur volutpat
 		ac feugiat augue.
 	</Paragraph>
+
+	<Code language="typescript" code='let a = "1234"; // Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus lacus ut eros consectetur porttitor. Etiam pharetra tortor at malesuada gravida. Etiam eget arcu rutrum, bibendum ipsum eu, pulvinar tellus. Curabitur semper sem eget lacinia faucibus. Phasellus mattis tempus nulla, nec euismod nulla ultricies nec. Ut efficitur enim vel venenatis ultrices. Nam sit amet est sed turpis accumsan sodales nec eu ante.
+const b = "foo"' />
+
 	<Paragraph>
 		Phasellus eget ligula purus. Sed posuere sapien ut magna dignissim pellentesque. Integer dictum
 		sapien eu tristique aliquet. Nullam tristique urna in erat elementum, sed malesuada nibh varius.
