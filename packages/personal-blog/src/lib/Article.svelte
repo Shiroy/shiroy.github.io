@@ -1,4 +1,4 @@
-<article class="mx-auto px-2 w-full md:w-2/3 lg:w-1/2 font-serif mt-20">
+<article class="mx-auto px-4 w-full md:px-0 md:w-2/3 xl:w-1/2 xl:mt-20 mt-4">
 	<slot name="title" />
 
 	<div class="w-1/2 border-b mb-4" />
