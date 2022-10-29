@@ -55,11 +55,7 @@
 {:else if token.type === 'hr'}
 	<div class="border-b-2 w-full my-6" />
 {:else if token.type === 'image'}
-	<img
-		src="https://github.com/aws-samples/aws-stf-core-scorpio/raw/main/{token.href}"
-		class="max-w-full"
-		alt={token.text}
-	/>
+	<img src={token.href} class="max-w-full" alt={token.text} />
 {:else if token.type === 'list'}
 	{#if token.ordered}
 		<ol class="list-decimal ml-8 mb-4">
