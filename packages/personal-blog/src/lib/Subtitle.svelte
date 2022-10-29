@@ -1,16 +1,23 @@
 <script lang="ts">
-	export let level: 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+	export let level: number;
+	let tag = `h${level}`;
 </script>
 
-<svelte:element this={level}><slot /></svelte:element>
+<svelte:element this={tag}><slot /></svelte:element>
 
 <style>
+	h1,
 	h2,
 	h3,
 	h4,
 	h5,
 	h6 {
 		@apply mb-6;
+	}
+
+	h1 {
+		@apply text-4xl;
+		@apply font-bold;
 	}
 
 	h2 {
