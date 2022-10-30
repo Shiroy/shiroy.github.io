@@ -8,9 +8,9 @@
 </script>
 
 <Article>
-	<Title slot="title">This is a very very very long title</Title>
+	<Title slot="title">{data.title}</Title>
 
 	{#each data.content as token}
-		<Node {token} />
+		<Node {token} slug={data.slug} />
 	{/each}
 </Article>
