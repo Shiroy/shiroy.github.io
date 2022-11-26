@@ -1,9 +1,15 @@
 <script lang="ts">
-	export let level: number;
-	let tag = `h${level}`;
+	import type { Heading } from 'mdast';
+	import Phrase from './Phrase.svelte';
+	export let content: Heading;
+	let tag = `h${content.depth}`;
 </script>
 
-<svelte:element this={tag}><slot /></svelte:element>
+<svelte:element this={tag}>
+	{#each content.children as e}
+		<Phrase content={e} />
+	{/each}
+</svelte:element>
 
 <style>
 	h1,

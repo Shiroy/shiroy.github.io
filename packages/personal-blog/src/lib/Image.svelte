@@ -20,7 +20,6 @@
 	onMount(async () => {
 		if (file.endsWith('.jpg')) {
 			srcset = (await getImageJPG(slug, file.slice(0, -4))).default;
-			console.log(srcset);
 		} else if (file.endsWith('.png')) {
 			srcset = (await getImagePNG(slug, file.slice(0, -4))).default;
 		}

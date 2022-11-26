@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Article from '$lib/Article.svelte';
+	import Markdown from '$lib/Markdown.svelte';
 	import Title from '$lib/Title.svelte';
 	import type { PageData } from './$types';
-	import Node from './Node.svelte';
 
 	export let data: PageData;
 </script>
@@ -19,7 +19,5 @@
 		<svelte:fragment slot="author">{data.author}</svelte:fragment>
 	</Title>
 
-	{#each data.content as token}
-		<Node {token} slug={data.slug} />
-	{/each}
+	<Markdown content={data.content} />
 </Article>

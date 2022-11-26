@@ -1,18 +1,24 @@
 <script lang="ts">
-	import type { marked } from 'marked';
+	import type { Content } from 'mdast';
 	import Paragraph from '$lib/Paragraph.svelte';
 	import Subtitle from '$lib/Subtitle.svelte';
 	import Code from '$lib/Code.svelte';
 	import Blockquote from '$lib/Blockquote.svelte';
 	import Image from '$lib/Image.svelte';
 
-	export let token: marked.Token;
+	export let token: Content;
 	export let slug: string;
 </script>
 
-{#if token.type === 'heading'}
+{#if token.type === 'paragraph'}
+	<Paragraph>
+		{token.children}
+	</Paragraph>
+{/if}
+
+<!-- {#if token.type === 'heading'}
 	<Subtitle level={token.depth}>
-		{#each token.tokens as t}
+		{#each token.depth as t}
 			<svelte:self token={t} {slug} />
 		{/each}
 	</Subtitle>
@@ -113,4 +119,4 @@
 			<svelte:self token={t} {slug} />
 		{/each}
 	</span>
-{/if}
+{/if} -->

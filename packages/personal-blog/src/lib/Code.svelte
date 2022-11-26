@@ -2,11 +2,11 @@
 	import 'highlight.js/styles/github.css';
 	import { onMount } from 'svelte';
 	import type { HLJSApi } from 'highlight.js';
+	import type { Code } from 'mdast';
 
-	export let language: string | undefined = undefined;
-	export let code: string;
+	export let content: Code;
 
-	let highlightedCode = code;
+	let highlightedCode = content.value;
 	let hljs: HLJSApi | null = null;
 
 	onMount(async () => {
@@ -15,9 +15,12 @@
 
 	$: {
 		if (hljs) {
-			highlightedCode = hljs.highlightAuto(code, language ? [language] : undefined).value;
+			highlightedCode = hljs.highlightAuto(
+				content.value,
+				content.lang ? [content.lang] : undefined
+			).value;
 		} else {
-			highlightedCode = code;
+			highlightedCode = content.value;
 		}
 	}
 </script>
