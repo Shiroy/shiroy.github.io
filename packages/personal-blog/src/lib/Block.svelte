@@ -5,6 +5,7 @@
 	import Blockquote from './Blockquote.svelte';
 	import HorizontalLine from './HorizontalLine.svelte';
 	import Heading from './Heading.svelte';
+	import List from './List.svelte';
 
 	export let content: BlockContent;
 </script>
@@ -19,4 +20,6 @@
 	<HorizontalLine />
 {:else if content.type === 'heading'}
 	<Heading {content} />
+{:else if content.type === 'list'}
+	<List {content} />
 {/if}

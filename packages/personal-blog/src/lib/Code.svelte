@@ -7,6 +7,7 @@
 	export let content: Code;
 
 	let highlightedCode = content.value;
+	let sanitize = true;
 	let hljs: HLJSApi | null = null;
 
 	onMount(async () => {
@@ -19,13 +20,19 @@
 				content.value,
 				content.lang ? [content.lang] : undefined
 			).value;
+			sanitize = false;
 		} else {
 			highlightedCode = content.value;
+			sanitize = true;
 		}
 	}
 </script>
 
-<pre class="overflow-x-auto max-w-full mb-4 border p-2"><code>{@html highlightedCode}</code></pre>
+{#if sanitize}
+	<pre class="overflow-x-auto max-w-full mb-4 border p-2"><code>{highlightedCode}</code></pre>
+{:else}
+	<pre class="overflow-x-auto max-w-full mb-4 border p-2"><code>{@html highlightedCode}</code></pre>
+{/if}
 
 <style>
 	pre code {

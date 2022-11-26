@@ -57,7 +57,7 @@ export async function load({ params }: PageServerLoadEvent) {
 
 	console.log(metadata);
 
-	console.log(JSON.stringify(data, null, 2));
+	fs.writeFileSync('tokens.json', JSON.stringify(data, null, 2));
 
 	return {
 		title: metadata.title,

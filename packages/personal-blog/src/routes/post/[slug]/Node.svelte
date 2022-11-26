@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Content } from 'mdast';
 	import Paragraph from '$lib/Paragraph.svelte';
-	import Subtitle from '$lib/Subtitle.svelte';
+	import Subtitle from '$lib/Heading.svelte';
 	import Code from '$lib/Code.svelte';
 	import Blockquote from '$lib/Blockquote.svelte';
 	import Image from '$lib/Image.svelte';
