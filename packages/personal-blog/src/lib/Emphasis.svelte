@@ -4,8 +4,8 @@
 	export let content: Emphasis;
 </script>
 
-<span class="italic">
+<em class="italic">
 	{#each content.children as e}
 		<Phrase content={e} />
 	{/each}
-</span>
+</em>
