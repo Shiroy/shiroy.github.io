@@ -23,8 +23,6 @@ importers:
       eslint-plugin-promise: ^6.0.0
       eslint-plugin-svelte3: ^4.0.0
       highlight.js: ^11.6.0
-      markdown-ast: ^0.3.0
-      marked: ^4.1.1
       postcss: ^8.4.18
       prettier: ^2.7.1
       prettier-plugin-svelte: ^2.7.0
@@ -47,8 +45,6 @@ importers:
       zod: ^3.19.1
     dependencies:
       highlight.js: 11.6.0
-      markdown-ast: 0.3.0
-      marked: 4.1.1
       remark: 14.0.2
       remark-frontmatter: 4.0.1
       remark-gfm: 3.0.1
@@ -1957,18 +1953,8 @@ packages:
       sourcemap-codec: 1.4.8
     dev: true
 
-  /markdown-ast/0.3.0:
-    resolution: {integrity: sha512-tFydZe/NV56f2LdKr49zElVKnOt/sH8G1rQ0wl8+Xtylv0mbh9g20tUK9Ln5CvTOajeJdaK5oWcZosUBJRBEcg==}
-    dev: false
-
   /markdown-table/3.0.2:
     resolution: {integrity: sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==}
-    dev: false
-
-  /marked/4.1.1:
-    resolution: {integrity: sha512-0cNMnTcUJPxbA6uWmCmjWz4NJRe/0Xfk2NhXCUHjew9qJzFN20krFnsUe7QynwqOwa5m1fZ4UDg0ycKFVC0ccw==}
-    engines: {node: '>= 12'}
-    hasBin: true
     dev: false
 
   /mdast-util-find-and-replace/2.2.1:

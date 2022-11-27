@@ -6,6 +6,7 @@
 	import HorizontalLine from './HorizontalLine.svelte';
 	import Heading from './Heading.svelte';
 	import List from './List.svelte';
+	import Table from './Table.svelte';
 
 	export let content: BlockContent;
 </script>
@@ -22,4 +23,6 @@
 	<Heading {content} />
 {:else if content.type === 'list'}
 	<List {content} />
+{:else if content.type === 'table'}
+	<Table {content} />
 {/if}

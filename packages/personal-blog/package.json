@@ -43,8 +43,6 @@
 	"type": "module",
 	"dependencies": {
 		"highlight.js": "^11.6.0",
-		"markdown-ast": "^0.3.0",
-		"marked": "^4.1.1",
 		"remark": "^14.0.2",
 		"remark-frontmatter": "^4.0.1",
 		"remark-gfm": "^3.0.1",

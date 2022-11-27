@@ -1,7 +1,5 @@
-import { marked } from 'marked';
-import type { Renderer } from 'marked';
 import fs from 'fs';
-import { json, error } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import type { PageServerLoadEvent } from './$types';
 import * as path from 'path';
 import { unified } from 'unified';
