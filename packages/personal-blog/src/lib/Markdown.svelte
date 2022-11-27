@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Root } from 'mdast';
-	import Phrase from './Phrase.svelte';
-	import Block from './Block.svelte';
-	import { isPhrase, isBlock } from './utils';
+	import Phrase from './markdown/Phrase.svelte';
+	import Block from './markdown/Block.svelte';
+	import { isPhrase, isBlock } from './markdown/utils';
 	export let content: Root;
 </script>
 

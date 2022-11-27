@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { BlockContent } from 'mdast';
-	import Paragraph from '$lib/Paragraph.svelte';
+	import Paragraph from '$lib/markdown/Paragraph.svelte';
 	import Code from './Code.svelte';
 	import Blockquote from './Blockquote.svelte';
 	import HorizontalLine from './HorizontalLine.svelte';
