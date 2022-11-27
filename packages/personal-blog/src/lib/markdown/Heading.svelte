@@ -1,11 +1,33 @@
+<script lang="ts" context="module">
+	import type { Content } from 'mdast';
+
+	function getTextContentInner(content: Content): string {
+		if (content.type === 'text') {
+			return content.value;
+		} else {
+			const children: Content[] = (content as any).children ?? [];
+			return getTextContent(children);
+		}
+	}
+
+	function getTextContent(content: Content[]): string {
+		return content.map((c) => getTextContentInner(c)).join();
+	}
+</script>
+
 <script lang="ts">
 	import type { Heading } from 'mdast';
 	import Phrase from './Phrase.svelte';
 	export let content: Heading;
+	import type GithubSlugger from 'github-slugger';
+	import { getContext } from 'svelte';
+	import { slugger } from './symbols';
 	let tag = `h${content.depth}`;
+	let githubSlugger = getContext<GithubSlugger>(slugger);
+	let id = githubSlugger.slug(getTextContent(content.children));
 </script>
 
-<svelte:element this={tag}>
+<svelte:element this={tag} {id}>
 	{#each content.children as e}
 		<Phrase content={e} />
 	{/each}

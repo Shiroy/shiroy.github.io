@@ -2,7 +2,7 @@
 	import type { Table, TableRow as TableRowAST } from 'mdast';
 	import { setContext } from 'svelte';
 	import TableRow from './TableRow.svelte';
-	import { tableAlignment } from './tableSymbol';
+	import { tableAlignment } from './symbols';
 	export let content: Table;
 
 	setContext(tableAlignment, content.align);

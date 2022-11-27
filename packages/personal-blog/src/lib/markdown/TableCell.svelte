@@ -2,7 +2,7 @@
 	import type { TableCell, AlignType } from 'mdast';
 	import { getContext } from 'svelte';
 	import Phrase from './Phrase.svelte';
-	import { tableAlignment } from './tableSymbol';
+	import { tableAlignment } from './symbols';
 	export let content: TableCell;
 	export let isHeader = false;
 	export let colNumber: number;
