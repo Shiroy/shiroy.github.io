@@ -1,10 +1,6 @@
 name: Publish to github pages
 on:
   - push
-inputs:
-  build_path:
-    required: true
-    default: "packages/personal-blog/build"
 jobs:
   build:
     runs-on: ubuntu-latest
